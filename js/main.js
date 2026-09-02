@@ -62,6 +62,14 @@
     let slideInterval;
 
     if (slides.length > 0 && dotsContainer) {
+        // Helper to load slide background on demand
+        function loadSlideBg(slideEl) {
+            if (slideEl && slideEl.dataset.bg) {
+                slideEl.style.backgroundImage = `url('${slideEl.dataset.bg}')`;
+                delete slideEl.dataset.bg;
+            }
+        }
+
         // Build dots
         slides.forEach((_, i) => {
             const dot = document.createElement('button');
@@ -75,9 +83,18 @@
         const dots = dotsContainer.querySelectorAll('.dot');
 
         function goToSlide(index) {
+            const nextIndex = (index + slides.length) % slides.length;
+            
+            // Ensure next slide image is loaded before activating
+            loadSlideBg(slides[nextIndex]);
+
+            // Also preload the one after next
+            const upcomingIndex = (nextIndex + 1) % slides.length;
+            loadSlideBg(slides[upcomingIndex]);
+
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
-            currentSlide = (index + slides.length) % slides.length;
+            currentSlide = nextIndex;
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
         }
@@ -85,6 +102,14 @@
         function nextSlide() {
             goToSlide(currentSlide + 1);
         }
+
+        // Preload rest of slides once page has fully loaded
+        window.addEventListener('load', () => {
+            // Wait 1.5s after load to not compete with critical rendering
+            setTimeout(() => {
+                slides.forEach(s => loadSlideBg(s));
+            }, 1500);
+        });
 
         // Auto rotate
         function startSlideshow() {

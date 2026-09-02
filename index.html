@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as="image" href="img/hero/hero-1-aerea.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="img/logo-brezza.webp" type="image/webp">
 </head>
 <body>
 
@@ -43,10 +45,10 @@
 <section class="hero" id="hero">
     <div class="hero-slides">
         <div class="hero-slide active" style="background-image: url('img/hero/hero-1-aerea.webp');"></div>
-        <div class="hero-slide" style="background-image: url('img/hero/hero-2-piscina.webp');"></div>
-        <div class="hero-slide" style="background-image: url('img/hero/hero-3-nocturna.webp');"></div>
-        <div class="hero-slide" style="background-image: url('img/hero/hero-4-plaza.webp');"></div>
-        <div class="hero-slide" style="background-image: url('img/hero/hero-5-lake.webp');"></div>
+        <div class="hero-slide" data-bg="img/hero/hero-2-piscina.webp"></div>
+        <div class="hero-slide" data-bg="img/hero/hero-3-nocturna.webp"></div>
+        <div class="hero-slide" data-bg="img/hero/hero-4-plaza.webp"></div>
+        <div class="hero-slide" data-bg="img/hero/hero-5-lake.webp"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -133,7 +135,7 @@
             <a href="#contacto" class="btn btn-outline">Solicitar Brochure</a>
         </div>
         <div class="col-image reveal">
-            <img src="img/section-fachada.webp" alt="Fachada Brezza">
+            <img src="img/section-fachada.webp" alt="Fachada Brezza" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -142,7 +144,7 @@
 <section class="section section-alt">
     <div class="container two-col reverse">
         <div class="col-image reveal">
-            <img src="img/section-pool-lake.webp" alt="Piscina Brezza">
+            <img src="img/section-pool-lake.webp" alt="Piscina Brezza" loading="lazy" decoding="async">
         </div>
         <div class="col-text reveal">
             <span class="eyebrow">Las Unidades</span>
@@ -170,28 +172,28 @@
         </div>
         <div class="gallery-grid">
             <a href="img/gallery/g1.webp" class="g-item g1 reveal" data-lightbox>
-                <img src="img/gallery/g1.webp" alt="Brezza — Vista al atardecer">
+                <img src="img/gallery/g1.webp" alt="Brezza — Vista al atardecer" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g2.webp" class="g-item g2 reveal" data-lightbox>
-                <img src="img/gallery/g2.webp" alt="Brezza — Vista nocturna">
+                <img src="img/gallery/g2.webp" alt="Brezza — Vista nocturna" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g3.webp" class="g-item g3 reveal" data-lightbox>
-                <img src="img/gallery/g3.webp" alt="Brezza — Plaza interior">
+                <img src="img/gallery/g3.webp" alt="Brezza — Plaza interior" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g4.webp" class="g-item g4 reveal" data-lightbox>
-                <img src="img/gallery/g4.webp" alt="Brezza — Vista al lago">
+                <img src="img/gallery/g4.webp" alt="Brezza — Vista al lago" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g5.webp" class="g-item g5 reveal" data-lightbox>
-                <img src="img/gallery/g5.webp" alt="Brezza — Fachada principal">
+                <img src="img/gallery/g5.webp" alt="Brezza — Fachada principal" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g6.webp" class="g-item g6 reveal" data-lightbox>
-                <img src="img/gallery/g6.webp" alt="Brezza — Vista exterior">
+                <img src="img/gallery/g6.webp" alt="Brezza — Vista exterior" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g7.webp" class="g-item g7 reveal" data-lightbox>
-                <img src="img/gallery/g7.webp" alt="Brezza — Pileta">
+                <img src="img/gallery/g7.webp" alt="Brezza — Pileta" loading="lazy" decoding="async">
             </a>
             <a href="img/gallery/g8.webp" class="g-item g8 reveal" data-lightbox>
-                <img src="img/gallery/g8.webp" alt="Brezza — Vista cenital">
+                <img src="img/gallery/g8.webp" alt="Brezza — Vista cenital" loading="lazy" decoding="async">
             </a>
         </div>
     </div>
@@ -228,7 +230,7 @@
                     </ul>
                 </div>
                 <div class="tip-plan">
-                    <img src="img/floorplans/bloque-b-2dorm.webp" alt="Planta Bloque B — 2 dormitorios">
+                    <img src="img/floorplans/bloque-b-2dorm.webp" alt="Planta Bloque B — 2 dormitorios" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -250,7 +252,7 @@
                     </ul>
                 </div>
                 <div class="tip-plan">
-                    <img src="img/floorplans/bloque-a-3dorm.webp" alt="Planta Bloque A — 3 dormitorios">
+                    <img src="img/floorplans/bloque-a-3dorm.webp" alt="Planta Bloque A — 3 dormitorios" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -268,7 +270,7 @@
             <p>Las unidades habitacionales están distribuidas en 4 bloques. Los Bloques A y B están implantados sobre la calle Wenceslao López, y los Bloques C y D sobre la calle interna del Complejo Habitacional.</p>
         </div>
         <div class="master-plan reveal">
-            <img src="img/floorplans/master-plan.webp" alt="Plano maestro de distribución">
+            <img src="img/floorplans/master-plan.webp" alt="Plano maestro de distribución" loading="lazy" decoding="async">
         </div>
     </div>
 </section>

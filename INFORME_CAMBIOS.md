@@ -81,3 +81,21 @@ Se realizó una conversión masiva de todos los recursos gráficos del proyecto:
 3. Guardar cambios.
 4. **URL de Producción:**  
    👉 **`https://francopertile.github.io/brezza-web/`**
+
+---
+
+## 6. Optimización Avanzada de Velocidad de Carga (Core Web Vitals)
+
+### Medidas Implementadas
+1. **Precarga Crítica (Preload):**
+   - Inclusión de `<link rel="preload">` con `fetchpriority="high"` para `hero-1-aerea.webp` y el logo principal en `<head>`, eliminando el bloqueo de renderizado inicial (FCP / LCP).
+2. **Carga Diferida en Carrusel Hero (`data-bg`):**
+   - El navegador únicamente descarga la primera diapositiva al entrar a la página.
+   - Las diapositivas 2 a 5 utilizan atributos `data-bg` y se precargan en segundo plano de manera asíncrona tras el evento `load` o justo antes de su transición activa en [js/main.js](file:///c:/Users/ThinkBook/Desktop/brezza%20full-project/brezza-web/js/main.js).
+3. **Lazy Loading Nativo:**
+   - Incorporación de `loading="lazy"` y `decoding="async"` en todas las imágenes por debajo del pliegue (Renders de fachada, piscina, galería fotográfica y planos técnicos).
+4. **Compresión y Reescalado Adaptativo:**
+   - Reducción del peso de `logo-brezza.webp` de `512 KB` a **`50.4 KB`**.
+   - Reducción de las fotos panorámicas a un ancho óptimo con calidad WebP Q75-80.
+   - **Peso total del conjunto de imágenes:** Reducido de `9.61 MB` a **`3.44 MB`** (y carga inicial efectiva en primer plano de **`< 250 KB`**).
+
