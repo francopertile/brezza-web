@@ -412,15 +412,88 @@ form .btn { margin-top: 1.5rem; }
     color: var(--c-cream);
 }
 
-/* ---------- Two column section ---------- */
+/* ---------- Two column section (Large Architectural Showcase) ---------- */
 .two-col {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 3.5rem;
     align-items: center;
+    position: relative;
 }
-.two-col.reverse .col-image { order: -1; }
-.col-text p { color: var(--c-text-muted); margin-bottom: 1.25rem; }
+.two-col.reverse {
+    grid-template-columns: 1.25fr 1fr;
+}
+.two-col.reverse .col-image {
+    order: -1;
+}
+
+#caracteristicas .col-text,
+.section-alt .col-text {
+    position: relative;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 2.75rem 2.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 12px 36px rgba(20, 40, 65, 0.08);
+}
+.section-alt .col-text {
+    background: rgba(245, 239, 227, 0.92);
+    border: 1px solid rgba(201, 184, 159, 0.4);
+}
+
+.col-text p {
+    color: var(--c-text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.col-image {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius-lg);
+}
+
+/* Big architectural image presentation with fade mask */
+#caracteristicas .col-image,
+.section-alt .col-image {
+    min-height: 480px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+#caracteristicas .col-image {
+    margin-left: -3.5rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 8%, rgba(0, 0, 0, 0.85) 20%, black 35%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 8%, rgba(0, 0, 0, 0.85) 20%, black 35%);
+}
+
+.section-alt .col-image {
+    margin-right: -3.5rem;
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.35) 8%, rgba(0, 0, 0, 0.85) 20%, black 35%);
+    mask-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.35) 8%, rgba(0, 0, 0, 0.85) 20%, black 35%);
+}
+
+#caracteristicas .col-image img,
+.section-alt .col-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    max-height: 620px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    transition: transform 0.8s ease;
+}
+
+#caracteristicas .col-image:hover img,
+.section-alt .col-image:hover img {
+    transform: scale(1.04);
+}
+
 .col-image img {
     width: 100%;
     border-radius: var(--radius-lg);
@@ -845,6 +918,26 @@ form .btn { margin-top: 1.5rem; }
     .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
     .two-col, .two-col.reverse { grid-template-columns: 1fr; gap: 2rem; }
     .two-col.reverse .col-image { order: 0; }
+
+    #caracteristicas .col-text,
+    .section-alt .col-text {
+        padding: 2rem 1.5rem;
+        backdrop-filter: none;
+        box-shadow: var(--shadow-sm);
+    }
+    #caracteristicas .col-image,
+    .section-alt .col-image {
+        margin-left: 0;
+        margin-right: 0;
+        min-height: 280px;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    #caracteristicas .col-image img,
+    .section-alt .col-image img {
+        min-height: 280px;
+        max-height: 380px;
+    }
 
     .tipologia-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
