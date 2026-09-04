@@ -169,13 +169,11 @@
         });
     }
 
-    // ---------- Forms ----------
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
+    // ---------- Forms (mailto nativo) ----------
+    // Los formularios usan action="mailto:..." nativo del navegador.
+    // Solo resaltamos campos vacíos antes de enviar.
+    document.querySelectorAll('form').forEach(form => {
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Simple validation
             const required = form.querySelectorAll('[required]');
             let valid = true;
             required.forEach(input => {
@@ -186,28 +184,11 @@
                     input.style.borderColor = '';
                 }
             });
-
             if (!valid) {
+                e.preventDefault();
                 alert('Por favor completá todos los campos requeridos.');
-                return;
             }
-
-            // Show success
-            const btn = form.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.textContent = '¡Gracias! Te contactaremos pronto';
-            btn.disabled = true;
-            btn.style.background = '#3A7A4F';
-            btn.style.borderColor = '#3A7A4F';
-
-            form.reset();
-
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-                btn.style.background = '';
-                btn.style.borderColor = '';
-            }, 4000);
+            // Si es válido, el form envía normalmente vía mailto
         });
     });
 
