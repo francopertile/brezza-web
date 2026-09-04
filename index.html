@@ -1,470 +1,494 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BREZZA — San Bernardino, Cordillera, Paraguay</title>
-    <meta name="description" content="38 unidades habitacionales en San Bernardino, Paraguay. Departamentos de 2 y 3 dormitorios. Pileta, canchas de pádel y fútbol. Contactanos.">
+    <meta name="description"
+        content="38 unidades habitacionales en San Bernardino, Paraguay. Departamentos de 2 y 3 dormitorios. Pileta, canchas de pádel y fútbol. Contactanos.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" as="image" href="img/hero/hero-1-aerea.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="img/logo-brezza.webp" type="image/webp">
 </head>
+
 <body>
 
-<!-- ========== HEADER ========== -->
-<header class="site-header" id="siteHeader">
-    <div class="header-inner">
-        <a href="#" class="brand">
-            <img src="img/logo-brezza.webp" alt="BREZZA" class="brand-logo">
-            <span class="brand-divider"></span>
-            <span class="brand-sub">San Bernardino</span>
-        </a>
-
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-
-        <nav class="site-nav" id="siteNav" aria-label="Menú principal">
-            <ul>
-                <li><a href="#caracteristicas">El Proyecto</a></li>
-                <li><a href="#unidades">Unidades</a></li>
-                <li><a href="#amenidades">Amenidades</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-                <li><a href="#contacto" class="nav-cta">Contactanos</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- ========== HERO ========== -->
-<section class="hero" id="hero">
-    <div class="hero-slides">
-        <div class="hero-slide active" style="background-image: url('img/hero/hero-1-aerea.webp');"></div>
-        <div class="hero-slide" data-bg="img/hero/hero-2-piscina.webp"></div>
-        <div class="hero-slide" data-bg="img/hero/hero-3-cenital.webp"></div>
-        <div class="hero-slide" data-bg="img/hero/hero-4-plaza.webp"></div>
-        <div class="hero-slide" data-bg="img/hero/hero-5-lake.webp"></div>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <img src="img/logo-brezza.webp" alt="BREZZA" class="hero-logo">
-        <p class="hero-tagline">Vivir en Brezza es conectar con el lago, con la naturaleza y con una forma más serena de habitar.</p>
-    </div>
-    <div class="hero-dots" id="heroDots"></div>
-</section>
-
-<!-- ========== INTRO + FORM ========== -->
-<section class="section intro-section">
-    <div class="container intro-grid">
-        <div class="intro-text reveal">
-            <img src="img/logo-brezza.webp" alt="BREZZA" class="intro-logo">
-            <h2>Un nuevo estándar de vida residencial en Paraguay</h2>
-            <p><strong>38 unidades habitacionales</strong> diseñadas para disfrutar en familia, combinando comodidad y naturaleza. El proyecto ofrece unidades de 2 y 3 dormitorios, además de amenities que invitan al descanso.</p>
-            <p>La materialidad del proyecto arquitectónico fusiona <strong>piedra, hormigón y vidrio</strong> para lograr espacios acogedores y conectados con la naturaleza. Modernidad sin perder cálidez.</p>
-            <a href="#contacto" class="btn btn-primary">Contactanos</a>
-        </div>
-        <div class="intro-form reveal">
-            <h3>¿Querés más información?</h3>
-            <form id="contactFormHero" novalidate>
-                <label for="name-hero">Nombre y Apellido</label>
-                <input type="text" id="name-hero" name="name" required>
-
-                <label for="phone-hero">Celular</label>
-                <input type="tel" id="phone-hero" name="phone" required>
-
-                <label for="email-hero">Correo Electrónico</label>
-                <input type="email" id="email-hero" name="email" required>
-
-                <label for="interest-hero">¿Vivienda o inversión?</label>
-                <select id="interest-hero" name="interest" required>
-                    <option value="">Seleccionar</option>
-                    <option value="Vivienda">Vivienda</option>
-                    <option value="Inversión">Inversión</option>
-                </select>
-
-                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- ========== QUICK FACTS ========== -->
-<section class="quick-facts">
-    <div class="container quick-facts-grid">
-        <div class="qf-item reveal">
-            <div class="qf-label">Barrio</div>
-            <div class="qf-value">San Bernardino</div>
-        </div>
-        <div class="qf-item reveal">
-            <div class="qf-label">Unidades</div>
-            <div class="qf-value">2 y 3 dormitorios</div>
-        </div>
-        <div class="qf-item reveal">
-            <div class="qf-label">Terreno</div>
-            <div class="qf-value">7.000 m²</div>
-        </div>
-        <div class="qf-item reveal">
-            <div class="qf-label">Entrega</div>
-            <div class="qf-value">Diciembre 2026</div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== CARACTERÍSTICAS DEL EDIFICIO ========== -->
-<section class="section" id="caracteristicas">
-    <div class="container two-col">
-        <div class="col-text reveal">
-            <span class="eyebrow">El Proyecto</span>
-            <h2>Características del complejo</h2>
-            <p>4 bloques habitacionales rodeados de vegetación, cancheros y árboles autóctonos. Las diferencias de niveles están dadas por la topografía natural del terreno, que se aprovecha para enriquecer el habitar del espacio.</p>
-            <ul class="icon-list">
-                <li>4 bloques habitacionales</li>
-                <li>38 unidades en total</li>
-                <li>Piscina con vista panorámica</li>
-                <li>Canchas de pádel y fútbol</li>
-                <li>Salón multiuso de 170 m²</li>
-                <li>Quincho con parrilla</li>
-                <li>Estacionamiento por unidad</li>
-                <li>Pavimento permeable para aguas de lluvia</li>
-            </ul>
-            <a href="#contacto" class="btn btn-outline">Solicitar Brochure</a>
-        </div>
-        <div class="col-image reveal">
-            <img src="img/section-fachada.webp" alt="Fachada Brezza" loading="lazy" decoding="async">
-        </div>
-    </div>
-</section>
-
-<!-- ========== CARACTERÍSTICAS DE LOS DEPARTAMENTOS ========== -->
-<section class="section section-alt">
-    <div class="container two-col reverse">
-        <div class="col-image reveal">
-            <img src="img/section-interior.webp" alt="Interior departamentos Brezza" loading="lazy" decoding="async">
-        </div>
-        <div class="col-text reveal">
-            <span class="eyebrow">Las Unidades</span>
-            <h2>Características de los departamentos</h2>
-            <p>Unidades de 2 y 3 dormitorios con espacios integrados, balcón con vista al lago y materiales cálidos. Diseñadas para aprovechar la luz natural y la conexión con el entorno.</p>
-            <ul class="icon-list">
-                <li>Placares integrales en las habitaciones</li>
-                <li>Ambientes climatizados</li>
-                <li>Cocheras individuales y dobles</li>
-                <li>Cámaras de vigilancia</li>
-                <li>Dos ascensores por bloque</li>
-                <li>Prevención contra incendios</li>
-                <li>Balcón con vista al lago</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- ========== GALERÍA ========== -->
-<section class="section gallery-section" id="galeria">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="eyebrow">Galería</span>
-            <h2>Conocé Brezza</h2>
-        </div>
-        <div class="gallery-grid">
-            <a href="img/gallery/g1.webp" class="g-item g1 reveal" data-lightbox>
-                <img src="img/gallery/g1.webp" alt="Brezza — Vista al atardecer" loading="lazy" decoding="async">
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="#" class="brand">
+                <img src="img/logo-brezza.webp" alt="BREZZA" class="brand-logo">
+                <span class="brand-divider"></span>
+                <span class="brand-sub">San Bernardino</span>
             </a>
-            <a href="img/gallery/g2.webp" class="g-item g2 reveal" data-lightbox>
-                <img src="img/gallery/g2.webp" alt="Brezza — Vista nocturna" loading="lazy" decoding="async">
-            </a>
-            <a href="img/gallery/g3.webp" class="g-item g3 reveal" data-lightbox>
-                <img src="img/gallery/g3.webp" alt="Brezza — Plaza interior" loading="lazy" decoding="async">
-            </a>
-            <a href="img/gallery/g4.webp" class="g-item g4 reveal" data-lightbox>
-                <img src="img/gallery/g4.webp" alt="Brezza — Vista al lago" loading="lazy" decoding="async">
-            </a>
-            <a href="img/gallery/g5.webp" class="g-item g5 reveal" data-lightbox>
-                <img src="img/gallery/g5.webp" alt="Brezza — Fachada principal" loading="lazy" decoding="async">
-            </a>
-            <a href="img/gallery/g6.webp" class="g-item g6 reveal" data-lightbox>
-                <img src="img/gallery/g6.webp" alt="Brezza — Vista exterior" loading="lazy" decoding="async">
-            </a>
-            <a href="img/gallery/g7.webp" class="g-item g7 reveal" data-lightbox>
-                <img src="img/gallery/g7.webp" alt="Brezza — Pileta" loading="lazy" decoding="async">
-            </a>
-            <a href="img/gallery/g8.webp" class="g-item g8 reveal" data-lightbox>
-                <img src="img/gallery/g8.webp" alt="Brezza — Vista cenital" loading="lazy" decoding="async">
-            </a>
-        </div>
-    </div>
-</section>
 
-<!-- ========== TIPOLOGÍAS ========== -->
-<section class="section section-dark" id="unidades">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="eyebrow eyebrow-light">Tipologías</span>
-            <h2 class="text-light">Elegí tu hogar en Brezza</h2>
-            <p class="text-light-muted">Dos tipologías pensadas para distintos estilos de vida. 2 dormitorios en suite o 3 dormitorios con master suite.</p>
-        </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
 
-        <div class="tipologias-tabs reveal">
-            <button class="tab-btn active" data-tab="2dorm">2 Dormitorios</button>
-            <button class="tab-btn" data-tab="3dorm">3 Dormitorios</button>
-        </div>
-
-        <div class="tab-panel active" id="tab-2dorm">
-            <div class="tipologia-grid">
-                <div class="tip-info">
-                    <h3 class="text-light">Departamentos de 2 Dormitorios</h3>
-                    <div class="area-stack">
-                        <div class="area-row"><span>Planta Baja</span><strong>52,70 m²</strong></div>
-                        <div class="area-row"><span>Planta Alta</span><strong>50 m²</strong></div>
-                        <div class="area-row"><span>Balcones</span><strong>7,5 m²</strong></div>
-                        <div class="area-row"><span>Área Exterior Techada</span><strong>6,60 m²</strong></div>
-                        <div class="area-row total"><span>Área Cubierta Total</span><strong>116,80 m²</strong></div>
-                    </div>
-                    <ul class="icon-list icon-list-light">
-                        <li>2 dormitorios en suite</li>
-                        <li>Balcón con vista al lago</li>
-                    </ul>
-                </div>
-                <div class="tip-plan">
-                    <img src="img/floorplans/bloque-b-2dorm.webp" alt="Planta Bloque B — 2 dormitorios" loading="lazy" decoding="async">
-                </div>
-            </div>
-        </div>
-
-        <div class="tab-panel" id="tab-3dorm">
-            <div class="tipologia-grid">
-                <div class="tip-info">
-                    <h3 class="text-light">Departamentos de 3 Dormitorios</h3>
-                    <div class="area-stack">
-                        <div class="area-row"><span>Planta Baja</span><strong>57,85 m²</strong></div>
-                        <div class="area-row"><span>Planta Alta</span><strong>64 m²</strong></div>
-                        <div class="area-row"><span>Balcón</span><strong>6,94 m²</strong></div>
-                        <div class="area-row"><span>Área Cubierta Exterior</span><strong>9,5 m²</strong></div>
-                        <div class="area-row total"><span>Área Total</span><strong>138,29 m²</strong></div>
-                    </div>
-                    <ul class="icon-list icon-list-light">
-                        <li>1 dormitorio en suite + 2 dormitorios simples</li>
-                        <li>Balcón con posibilidad de vista al lago</li>
-                    </ul>
-                </div>
-                <div class="tip-plan">
-                    <img src="img/floorplans/bloque-a-3dorm.webp" alt="Planta Bloque A — 3 dormitorios" loading="lazy" decoding="async">
-                </div>
-            </div>
-        </div>
-
-        <p class="disclaimer">Las imágenes, renders son de carácter ilustrativo y referencial. Algunos detalles de diseño, terminaciones, mobiliario, colores, vegetación y otros elementos visualizados pueden variar respecto al producto final.</p>
-    </div>
-</section>
-
-<!-- ========== MASTER PLAN ========== -->
-<section class="section">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="eyebrow">Implantación</span>
-            <h2>Distribución del conjunto</h2>
-            <p>Las unidades habitacionales están distribuidas en 4 bloques. Los Bloques A y B están implantados sobre la calle Wenceslao López, y los Bloques C y D sobre la calle interna del Complejo Habitacional.</p>
-        </div>
-        <div class="master-plan reveal">
-            <img src="img/floorplans/master-plan.webp" alt="Plano maestro de distribución" loading="lazy" decoding="async">
-        </div>
-    </div>
-</section>
-
-<!-- ========== AMENIDADES ========== -->
-<section class="section section-alt" id="amenidades">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="eyebrow">Amenidades</span>
-            <h2>Espacios para disfrutar</h2>
-        </div>
-        <div class="amenidades-grid">
-            <div class="amenity-card reveal">
-                <div class="amenity-icon">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32 8C20 8 10 18 10 30c0 8 4 14 10 18v4h24v-4c6-4 10-10 10-18C54 18 44 8 32 8z" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                        <path d="M16 36c4 4 10 6 16 6s12-2 16-6" stroke="currentColor" stroke-width="2.5"/>
-                        <circle cx="22" cy="28" r="2" fill="currentColor"/>
-                        <circle cx="42" cy="28" r="2" fill="currentColor"/>
-                    </svg>
-                </div>
-                <h3>Área de Piscina</h3>
-                <p class="amenity-meta">1500 m²</p>
-                <p class="amenity-detail">Vaso de 15 × 8 m con vista panorámica al lago</p>
-            </div>
-            <div class="amenity-card reveal">
-                <div class="amenity-icon">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="8" y="20" width="48" height="24" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                        <path d="M8 28h48M16 20v-8h32v8" stroke="currentColor" stroke-width="2.5"/>
-                        <path d="M14 50h6M44 50h6" stroke="currentColor" stroke-width="2.5"/>
-                    </svg>
-                </div>
-                <h3>Salón Multiuso</h3>
-                <p class="amenity-meta">170 m²</p>
-                <p class="amenity-detail">Espacio flexible para eventos y reuniones</p>
-            </div>
-            <div class="amenity-card reveal">
-                <div class="amenity-icon">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                        <path d="M32 18v28M20 26h24M20 38h24" stroke="currentColor" stroke-width="2.5"/>
-                    </svg>
-                </div>
-                <h3>Canchas Deportivas</h3>
-                <p class="amenity-meta">Pádel · Fútbol</p>
-                <p class="amenity-detail">Canchas de pádel y cancha de fútbol de césped sintético</p>
-            </div>
-            <div class="amenity-card reveal">
-                <div class="amenity-icon">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 24l40 16-40 16V24z" stroke="currentColor" stroke-width="2.5" fill="none"/>
-                        <path d="M22 36c0 4-2 8-2 8M30 36c0 4-2 8-2 8M38 36c0 4-2 8-2 8" stroke="currentColor" stroke-width="2.5"/>
-                    </svg>
-                </div>
-                <h3>Quincho con Parrilla</h3>
-                <p class="amenity-meta">Espacio Social</p>
-                <p class="amenity-detail">Parrilleros exteriores para compartir en familia</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== VENTAJAS PARA EL INVERSIONISTA ========== -->
-<section class="section investor-section">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="eyebrow eyebrow-light">Inversión</span>
-            <h2 class="text-light">Ventajas para el inversionista</h2>
-        </div>
-        <div class="investor-grid">
-            <div class="investor-card reveal">
-                <div class="investor-num">01</div>
-                <h3>Protección del capital</h3>
-                <p>Protección del capital frente a riesgos operativos.</p>
-            </div>
-            <div class="investor-card reveal">
-                <div class="investor-num">02</div>
-                <h3>Transparencia</h3>
-                <p>Informes periódicos de avance y estados financieros auditados.</p>
-            </div>
-            <div class="investor-card reveal">
-                <div class="investor-num">03</div>
-                <h3>Revalorización</h3>
-                <p>Mayor potencial de revalorización en una zona en pleno crecimiento.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== UBICACIÓN ========== -->
-<section class="section" id="ubicacion">
-    <div class="container two-col">
-        <div class="col-text reveal">
-            <span class="eyebrow">Ubicación</span>
-            <h2>San Bernardino, Cordillera</h2>
-            <p>La propiedad en la que se implanta el proyecto Brezza está ubicada en la zona del <strong>Anfiteatro José Asunción Flores</strong>, con una superficie de <strong>7.000 m²</strong>, rodeada de vegetación nativa y con vistas privilegiadas al <strong>Lago Ypacaraí</strong>.</p>
-            <ul class="icon-list">
-                <li>4 min del Shopping Mariscal</li>
-                <li>2 min del Supermercado Real</li>
-                <li>4 min de Plaza de las Américas</li>
-                <li>5 min del Colegio del Sol</li>
-            </ul>
-            <div class="address">
-                <strong>Dirección:</strong> Calle Wenceslao López, San Bernardino, Cordillera, Paraguay
-            </div>
-        </div>
-        <div class="col-image reveal">
-            <iframe
-                src="https://maps.google.com/maps?q=Anfiteatro%20Jos%C3%A9%20Asunci%C3%B3n%20Flores%2C%20San%20Bernardino%2C%20Paraguay&t=m&z=15&output=embed"
-                loading="lazy"
-                title="Ubicación Brezza — San Bernardino"
-                aria-label="Mapa de ubicación Brezza"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</section>
-
-<!-- ========== FOOTER / CONTACTO ========== -->
-<footer class="site-footer" id="contacto">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-info">
-                <img src="img/logo-brezza.webp" alt="BREZZA" class="footer-logo">
-                <p class="footer-text">San Bernardino, Cordillera, Paraguay</p>
-                <ul class="footer-contact">
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                        <span>Calle Wenceslao López, San Bernardino</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                        <span>+595 981 000 000</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                        <span>info@brezza.com.py</span>
-                    </li>
+            <nav class="site-nav" id="siteNav" aria-label="Menú principal">
+                <ul>
+                    <li><a href="#caracteristicas">El Proyecto</a></li>
+                    <li><a href="#unidades">Unidades</a></li>
+                    <li><a href="#amenidades">Amenidades</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto" class="nav-cta">Contactanos</a></li>
                 </ul>
-                <div class="footer-credits">
-                    <p class="footer-text"><strong>SELECTION</strong> Desarrollos Inmobiliarios</p>
-                    <p class="footer-text"><strong>ANDERSON</strong> Arquitectos e Ingenieros</p>
-                    <p class="footer-text"><strong>RE/MAX SELECTION</strong></p>
-                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('img/hero/hero-1-aerea.webp');"></div>
+            <div class="hero-slide" data-bg="img/hero/hero-2-piscina.webp"></div>
+            <div class="hero-slide" data-bg="img/hero/hero-3-cenital.webp"></div>
+            <div class="hero-slide" data-bg="img/hero/hero-4-plaza.webp"></div>
+            <div class="hero-slide" data-bg="img/hero/hero-5-lake.webp"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="img/logo-brezza.webp" alt="BREZZA" class="hero-logo">
+            <p class="hero-tagline">Vivir en Brezza es conectar con el lago, con la naturaleza y con una forma más
+                serena de habitar.</p>
+        </div>
+        <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <!-- ========== INTRO + FORM ========== -->
+    <section class="section intro-section">
+        <div class="container intro-grid">
+            <div class="intro-text reveal">
+                <img src="img/logo-brezza.webp" alt="BREZZA" class="intro-logo">
+                <h2>Un nuevo estándar de vida residencial en Paraguay</h2>
+                <p><strong>38 unidades habitacionales</strong> diseñadas para disfrutar en familia, combinando comodidad
+                    y naturaleza. El proyecto ofrece unidades de 2 y 3 dormitorios, además de amenities que invitan al
+                    descanso.</p>
+                <p>La materialidad del proyecto arquitectónico fusiona <strong>piedra, hormigón y vidrio</strong> para
+                    lograr espacios acogedores y conectados con la naturaleza. Modernidad sin perder cálidez.</p>
+                <a href="#contacto" class="btn btn-primary">Contactanos</a>
             </div>
-            <div class="footer-form">
-                <h3>Contactanos</h3>
-                <form id="contactFormFooter" novalidate>
-                    <label for="name-foot">Nombre y Apellido</label>
-                    <input type="text" id="name-foot" name="name" required>
+            <div class="intro-form reveal">
+                <h3>¿Querés más información?</h3>
+                <form id="contactFormHero" novalidate>
+                    <label for="name-hero">Nombre y Apellido</label>
+                    <input type="text" id="name-hero" name="name" required>
 
-                    <label for="phone-foot">Celular</label>
-                    <input type="tel" id="phone-foot" name="phone" required>
+                    <label for="phone-hero">Celular</label>
+                    <input type="tel" id="phone-hero" name="phone" required>
 
-                    <label for="email-foot">Correo Electrónico</label>
-                    <input type="email" id="email-foot" name="email" required>
+                    <label for="email-hero">Correo Electrónico</label>
+                    <input type="email" id="email-hero" name="email" required>
 
-                    <label for="project-foot">Proyecto de Interés</label>
-                    <select id="project-foot" name="project" required>
+                    <label for="interest-hero">¿Vivienda o inversión?</label>
+                    <select id="interest-hero" name="interest" required>
                         <option value="">Seleccionar</option>
-                        <option value="Brezza">Brezza</option>
+                        <option value="Vivienda">Vivienda</option>
+                        <option value="Inversión">Inversión</option>
                     </select>
 
                     <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                 </form>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 BREZZA — San Bernardino, Paraguay. Todos los derechos reservados.</p>
+    </section>
+
+    <!-- ========== QUICK FACTS ========== -->
+    <section class="quick-facts">
+        <div class="container quick-facts-grid">
+            <div class="qf-item reveal">
+                <div class="qf-label">Barrio</div>
+                <div class="qf-value">San Bernardino</div>
+            </div>
+            <div class="qf-item reveal">
+                <div class="qf-label">Unidades</div>
+                <div class="qf-value">2 y 3 dormitorios</div>
+            </div>
+            <div class="qf-item reveal">
+                <div class="qf-label">Terreno</div>
+                <div class="qf-value">7.000 m²</div>
+            </div>
+            <div class="qf-item reveal">
+                <div class="qf-label">Entrega</div>
+                <div class="qf-value">Diciembre 2026</div>
+            </div>
         </div>
+    </section>
+
+    <!-- ========== CARACTERÍSTICAS DEL EDIFICIO ========== -->
+    <section class="section" id="caracteristicas">
+        <div class="container two-col">
+            <div class="col-text reveal">
+                <span class="eyebrow">El Proyecto</span>
+                <h2>Características del complejo</h2>
+                <p>4 bloques habitacionales rodeados de vegetación, cancheros y árboles autóctonos. Las diferencias de
+                    niveles están dadas por la topografía natural del terreno, que se aprovecha para enriquecer el
+                    habitar del espacio.</p>
+                <ul class="icon-list">
+                    <li>4 bloques habitacionales</li>
+                    <li>38 unidades en total</li>
+                    <li>Piscina con vista panorámica</li>
+                    <li>Canchas de pádel y fútbol</li>
+                    <li>Salón multiuso de 170 m²</li>
+                    <li>Quincho con parrilla</li>
+                    <li>Estacionamiento por unidad</li>
+
+                </ul>
+                <a href="#contacto" class="btn btn-outline">Solicitar Brochure</a>
+            </div>
+            <div class="col-image reveal">
+                <img src="img/section-fachada.webp" alt="Fachada Brezza" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CARACTERÍSTICAS DE LOS DEPARTAMENTOS ========== -->
+    <section class="section section-alt">
+        <div class="container two-col reverse">
+            <div class="col-image reveal">
+                <img src="img/section-interior.webp" alt="Interior departamentos Brezza" loading="lazy"
+                    decoding="async">
+            </div>
+            <div class="col-text reveal">
+                <span class="eyebrow">Las Unidades</span>
+                <h2>Características de los departamentos</h2>
+                <p>Unidades de 2 y 3 dormitorios con espacios integrados, balcón con vista al lago y materiales cálidos.
+                    Diseñadas para aprovechar la luz natural y la conexión con el entorno.</p>
+                <ul class="icon-list">
+                    <li>Placares integrales en las habitaciones</li>
+                    <li>Ambientes climatizados</li>
+                    <li>Cochera incluida</li>
+                    <li>Cámaras de vigilancia</li>
+                    <li>Prevención contra incendios</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALERÍA ========== -->
+    <section class="section gallery-section" id="galeria">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Galería</span>
+                <h2>Conocé Brezza</h2>
+            </div>
+            <div class="gallery-grid">
+                <a href="img/gallery/g1.webp" class="g-item g1 reveal" data-lightbox>
+                    <img src="img/gallery/g1.webp" alt="Brezza — Vista al atardecer" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g2.webp" class="g-item g2 reveal" data-lightbox>
+                    <img src="img/gallery/g2.webp" alt="Brezza — Vista nocturna" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g3.webp" class="g-item g3 reveal" data-lightbox>
+                    <img src="img/gallery/g3.webp" alt="Brezza — Plaza interior" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g4.webp" class="g-item g4 reveal" data-lightbox>
+                    <img src="img/gallery/g4.webp" alt="Brezza — Vista al lago" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g5.webp" class="g-item g5 reveal" data-lightbox>
+                    <img src="img/gallery/g5.webp" alt="Brezza — Fachada principal" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g6.webp" class="g-item g6 reveal" data-lightbox>
+                    <img src="img/gallery/g6.webp" alt="Brezza — Vista exterior" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g7.webp" class="g-item g7 reveal" data-lightbox>
+                    <img src="img/gallery/g7.webp" alt="Brezza — Pileta" loading="lazy" decoding="async">
+                </a>
+                <a href="img/gallery/g8.webp" class="g-item g8 reveal" data-lightbox>
+                    <img src="img/gallery/g8.webp" alt="Brezza — Vista cenital" loading="lazy" decoding="async">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TIPOLOGÍAS ========== -->
+    <section class="section section-dark" id="unidades">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow eyebrow-light">Tipologías</span>
+                <h2 class="text-light">Elegí tu hogar en Brezza</h2>
+                <p class="text-light-muted">Dos tipologías pensadas para distintos estilos de vida. 2 dormitorios en
+                    suite o 3 dormitorios con master suite.</p>
+            </div>
+
+            <div class="tipologias-tabs reveal">
+                <button class="tab-btn active" data-tab="2dorm">2 Dormitorios</button>
+                <button class="tab-btn" data-tab="3dorm">3 Dormitorios</button>
+            </div>
+
+            <div class="tab-panel active" id="tab-2dorm">
+                <div class="tipologia-grid">
+                    <div class="tip-info">
+                        <h3 class="text-light">Departamentos de 2 Dormitorios</h3>
+                        <div class="area-stack">
+                            <div class="area-row"><span>Planta Baja</span><strong>52,70 m²</strong></div>
+                            <div class="area-row"><span>Planta Alta</span><strong>50 m²</strong></div>
+                            <div class="area-row"><span>Balcones</span><strong>7,5 m²</strong></div>
+                            <div class="area-row"><span>Área Exterior Techada</span><strong>6,60 m²</strong></div>
+                            <div class="area-row total"><span>Área Cubierta Total</span><strong>116,80 m²</strong></div>
+                        </div>
+                        <ul class="icon-list icon-list-light">
+                            <li>2 dormitorios en suite</li>
+                            <li>Balcón con vista al lago</li>
+                        </ul>
+                    </div>
+                    <div class="tip-plan">
+                        <img src="img/floorplans/bloque-b-2dorm.webp" alt="Planta Bloque B — 2 dormitorios"
+                            loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab-3dorm">
+                <div class="tipologia-grid">
+                    <div class="tip-info">
+                        <h3 class="text-light">Departamentos de 3 Dormitorios</h3>
+                        <div class="area-stack">
+                            <div class="area-row"><span>Planta Baja</span><strong>57,85 m²</strong></div>
+                            <div class="area-row"><span>Planta Alta</span><strong>64 m²</strong></div>
+                            <div class="area-row"><span>Balcón</span><strong>6,94 m²</strong></div>
+                            <div class="area-row"><span>Área Cubierta Exterior</span><strong>9,5 m²</strong></div>
+                            <div class="area-row total"><span>Área Total</span><strong>138,29 m²</strong></div>
+                        </div>
+                        <ul class="icon-list icon-list-light">
+                            <li>1 dormitorio en suite + 2 dormitorios simples</li>
+                            <li>Balcón con posibilidad de vista al lago</li>
+                        </ul>
+                    </div>
+                    <div class="tip-plan">
+                        <img src="img/floorplans/bloque-a-3dorm.webp" alt="Planta Bloque A — 3 dormitorios"
+                            loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+            <p class="disclaimer">Las imágenes, renders son de carácter ilustrativo y referencial. Algunos detalles de
+                diseño, terminaciones, mobiliario, colores, vegetación y otros elementos visualizados pueden variar
+                respecto al producto final.</p>
+        </div>
+    </section>
+
+    <!-- ========== MASTER PLAN ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Implantación</span>
+                <h2>Distribución del conjunto</h2>
+                <p>Las unidades habitacionales están distribuidas en 4 bloques. Los Bloques A y B están implantados
+                    sobre la calle Wenceslao López, y los Bloques C y D sobre la calle interna del Complejo
+                    Habitacional.</p>
+            </div>
+            <div class="master-plan reveal">
+                <img src="img/floorplans/master-plan.webp" alt="Plano maestro de distribución" loading="lazy"
+                    decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AMENIDADES ========== -->
+    <section class="section section-alt" id="amenidades">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Amenidades</span>
+                <h2>Espacios para disfrutar</h2>
+            </div>
+            <div class="amenidades-grid">
+                <div class="amenity-card reveal">
+                    <div class="amenity-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 8C20 8 10 18 10 30c0 8 4 14 10 18v4h24v-4c6-4 10-10 10-18C54 18 44 8 32 8z"
+                                stroke="currentColor" stroke-width="2.5" fill="none" />
+                            <path d="M16 36c4 4 10 6 16 6s12-2 16-6" stroke="currentColor" stroke-width="2.5" />
+                            <circle cx="22" cy="28" r="2" fill="currentColor" />
+                            <circle cx="42" cy="28" r="2" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Área de Piscina</h3>
+                    <p class="amenity-meta">1500 m²</p>
+                    <p class="amenity-detail">Vaso de 15 × 8 m con vista panorámica al lago</p>
+                </div>
+                <div class="amenity-card reveal">
+                    <div class="amenity-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="20" width="48" height="24" rx="2" stroke="currentColor" stroke-width="2.5"
+                                fill="none" />
+                            <path d="M8 28h48M16 20v-8h32v8" stroke="currentColor" stroke-width="2.5" />
+                            <path d="M14 50h6M44 50h6" stroke="currentColor" stroke-width="2.5" />
+                        </svg>
+                    </div>
+                    <h3>Salón Multiuso</h3>
+                    <p class="amenity-meta">170 m²</p>
+                    <p class="amenity-detail">Espacio flexible para eventos y reuniones</p>
+                </div>
+                <div class="amenity-card reveal">
+                    <div class="amenity-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2.5" fill="none" />
+                            <path d="M32 18v28M20 26h24M20 38h24" stroke="currentColor" stroke-width="2.5" />
+                        </svg>
+                    </div>
+                    <h3>Canchas Deportivas</h3>
+                    <p class="amenity-meta">Pádel · Fútbol</p>
+                    <p class="amenity-detail">Canchas de pádel y cancha de fútbol de césped sintético</p>
+                </div>
+                <div class="amenity-card reveal">
+                    <div class="amenity-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 24l40 16-40 16V24z" stroke="currentColor" stroke-width="2.5" fill="none" />
+                            <path d="M22 36c0 4-2 8-2 8M30 36c0 4-2 8-2 8M38 36c0 4-2 8-2 8" stroke="currentColor"
+                                stroke-width="2.5" />
+                        </svg>
+                    </div>
+                    <h3>Quincho con Parrilla</h3>
+                    <p class="amenity-meta">Espacio Social</p>
+                    <p class="amenity-detail">Parrilleros exteriores para compartir en familia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VENTAJAS PARA EL INVERSIONISTA ========== -->
+    <section class="section investor-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow eyebrow-light">Inversión</span>
+                <h2 class="text-light">Ventajas para el inversionista</h2>
+            </div>
+            <div class="investor-grid">
+                <div class="investor-card reveal">
+                    <div class="investor-num">01</div>
+                    <h3>Protección del capital</h3>
+                    <p>Seguridad juridica por medio de la figura del Fideicomiso.</p>
+                </div>
+                <div class="investor-card reveal">
+                    <div class="investor-num">02</div>
+                    <h3>Transparencia</h3>
+                    <p>Informe periodico de avance de obra. Fiscalizacion y auditoria propia y de la fiduciaria.</p>
+                </div>
+                <div class="investor-card reveal">
+                    <div class="investor-num">03</div>
+                    <h3>Revalorización</h3>
+                    <p>Mayor potencial de plusvalia, debido a su ubicacion emblematica y estrategica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== UBICACIÓN ========== -->
+    <section class="section" id="ubicacion">
+        <div class="container two-col">
+            <div class="col-text reveal">
+                <span class="eyebrow">Ubicación</span>
+                <h2>San Bernardino, Cordillera</h2>
+                <p>La propiedad en la que se implanta el proyecto Brezza está ubicada en la zona del <strong>Anfiteatro
+                        José Asunción Flores</strong>, con una superficie de <strong>7.000 m²</strong>, rodeada de
+                    vegetación nativa y con vistas privilegiadas al <strong>Lago Ypacaraí</strong>.</p>
+
+                <div class="address">
+                    <strong>Dirección:</strong> Calle Wenceslao López, San Bernardino, Cordillera, Paraguay
+                </div>
+            </div>
+            <div class="col-image reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=Anfiteatro%20Jos%C3%A9%20Asunci%C3%B3n%20Flores%2C%20San%20Bernardino%2C%20Paraguay&t=m&z=15&output=embed"
+                    loading="lazy" title="Ubicación Brezza — San Bernardino" aria-label="Mapa de ubicación Brezza"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER / CONTACTO ========== -->
+    <footer class="site-footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="img/logo-brezza.webp" alt="BREZZA" class="footer-logo">
+                    <p class="footer-text">San Bernardino, Cordillera, Paraguay</p>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor"
+                                    stroke-width="2" fill="none" />
+                                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                            <span>Calle Wenceslao López, San Bernardino</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0122 16.92z"
+                                    stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                            <span>+595 981 000 000</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    stroke="currentColor" stroke-width="2" fill="none" />
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                            <span>info@brezza.com.py</span>
+                        </li>
+                    </ul>
+                    <div class="footer-credits">
+                        <p class="footer-text"><strong>SELECTION</strong> Desarrollos Inmobiliarios</p>
+                        <p class="footer-text"><strong>ANDERSON</strong> Arquitectos e Ingenieros</p>
+                        <p class="footer-text"><strong>RE/MAX SELECTION</strong></p>
+                    </div>
+                </div>
+                <div class="footer-form">
+                    <h3>Contactanos</h3>
+                    <form id="contactFormFooter" novalidate>
+                        <label for="name-foot">Nombre y Apellido</label>
+                        <input type="text" id="name-foot" name="name" required>
+
+                        <label for="phone-foot">Celular</label>
+                        <input type="tel" id="phone-foot" name="phone" required>
+
+                        <label for="email-foot">Correo Electrónico</label>
+                        <input type="email" id="email-foot" name="email" required>
+
+                        <label for="project-foot">Proyecto de Interés</label>
+                        <select id="project-foot" name="project" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Brezza">Brezza</option>
+                        </select>
+
+                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 BREZZA — San Bernardino, Paraguay. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOAT ========== -->
+    <a href="https://wa.me/595981000000" class="whatsapp-float" target="_blank" rel="noopener"
+        aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 3C9 3 3 9 3 16c0 2.4.6 4.7 1.7 6.7L3 29l6.5-1.7C11.4 28.4 13.6 29 16 29c7 0 13-6 13-13S23 3 16 3zm0 23.5c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.4 19.9 4.7 18 4.7 16 4.7 9.7 9.7 4.7 16 4.7S27.3 9.7 27.3 16 22.3 26.5 16 26.5zm7-9.4c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2s-1 1.3-1.3 1.5c-.2.2-.5.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-.9-1.8-2.1-2-2.5-.2-.4 0-.6.2-.8.2-.2.4-.5.5-.7.2-.2.2-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-1 .5-.4.4-1.3 1.3-1.3 3.2 0 1.9 1.4 3.7 1.5 4 .2.2 2.7 4.1 6.5 5.8.9.4 1.6.6 2.2.8.9.3 1.7.3 2.4.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.7-.5z" />
+        </svg>
+    </a>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">×</button>
+        <img id="lightboxImg" src="" alt="">
     </div>
-</footer>
 
-<!-- ========== WHATSAPP FLOAT ========== -->
-<a href="https://wa.me/595981000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 3C9 3 3 9 3 16c0 2.4.6 4.7 1.7 6.7L3 29l6.5-1.7C11.4 28.4 13.6 29 16 29c7 0 13-6 13-13S23 3 16 3zm0 23.5c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-3.9 1 1-3.8-.3-.4C5.4 19.9 4.7 18 4.7 16 4.7 9.7 9.7 4.7 16 4.7S27.3 9.7 27.3 16 22.3 26.5 16 26.5zm7-9.4c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2s-1 1.3-1.3 1.5c-.2.2-.5.3-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-.9-1.8-2.1-2-2.5-.2-.4 0-.6.2-.8.2-.2.4-.5.5-.7.2-.2.2-.4.4-.6.1-.2 0-.5 0-.7 0-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.2 0-.6.1-1 .5-.4.4-1.3 1.3-1.3 3.2 0 1.9 1.4 3.7 1.5 4 .2.2 2.7 4.1 6.5 5.8.9.4 1.6.6 2.2.8.9.3 1.7.3 2.4.2.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.7-.5z"/>
-    </svg>
-</a>
-
-<!-- ========== LIGHTBOX ========== -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">×</button>
-    <img id="lightboxImg" src="" alt="">
-</div>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
