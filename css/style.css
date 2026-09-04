@@ -12,6 +12,8 @@
     --c-primary-dark:   #142841;   /* Más oscuro para hover */
     --c-primary-mid:    #3A7AB8;   /* Azul medio (olas del logo) */
     --c-primary-light:  #4FB6D9;   /* Cyan acento (olas claras) */
+    --c-forest:         #2f3d2f;   /* Verde bosque — footer, hero tint */
+    --c-forest-dark:    #222d22;   /* Verde bosque oscuro — hover */
     --c-cream:          #F5EFE3;   /* Crema cálido (fondos) */
     --c-cream-light:    #FAF5E8;   /* Crema más claro */
     --c-stone:          #C9B89F;   /* Piedra cálida */
@@ -274,7 +276,7 @@ h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(20, 40, 65, 0.6) 0%, rgba(20, 40, 65, 0.35) 50%, rgba(20, 40, 65, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(47, 61, 47, 0.60) 0%, rgba(47, 61, 47, 0.32) 50%, rgba(47, 61, 47, 0.72) 100%);
 }
 .hero-content {
     position: relative;
@@ -389,7 +391,7 @@ form .btn { margin-top: 1.5rem; }
 
 /* ---------- Quick facts ---------- */
 .quick-facts {
-    background: var(--c-primary);
+    background: var(--c-forest);
     color: var(--c-white);
     padding: 3rem 0;
 }
@@ -683,8 +685,8 @@ form .btn { margin-top: 1.5rem; }
 
 /* ---------- Investor section ---------- */
 .investor-section {
-    background: var(--c-primary);
-    background-image: linear-gradient(135deg, var(--c-primary) 0%, var(--c-primary-dark) 100%);
+    background: var(--c-forest);
+    background-image: linear-gradient(135deg, var(--c-forest) 0%, var(--c-forest-dark) 100%);
     color: var(--c-text-light);
 }
 .investor-grid {
@@ -740,7 +742,7 @@ form .btn { margin-top: 1.5rem; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-    background: var(--c-primary-dark);
+    background: var(--c-forest);
     color: var(--c-text-light);
     padding: 4rem 0 1.5rem;
 }
@@ -898,7 +900,7 @@ form .btn { margin-top: 1.5rem; }
         width: 75%;
         max-width: 320px;
         height: 100vh;
-        background: var(--c-primary-dark);
+        background: var(--c-forest);
         padding: 5rem 2rem 2rem;
         transition: right 0.4s ease;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
