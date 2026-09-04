@@ -56,78 +56,66 @@
     }
 
     // ---------- Hero slideshow ----------
-    const slides = document.querySelectorAll('.hero-slide');
-    const dotsContainer = document.getElementById('heroDots');
-    let currentSlide = 0;
-    let slideInterval;
+    (function () {
+        var slides = Array.from(document.querySelectorAll('.hero-slide'));
+        if (slides.length < 2) return;   // nada que rotar
 
-    if (slides.length > 0 && dotsContainer) {
-        // Helper to load slide background on demand
-        function loadSlideBg(slideEl) {
-            if (slideEl && slideEl.dataset.bg) {
-                slideEl.style.backgroundImage = `url('${slideEl.dataset.bg}')`;
-                delete slideEl.dataset.bg;
+        // Precarga todas las imágenes de fondo ahora mismo
+        slides.forEach(function (slide) {
+            if (slide.dataset.bg) {
+                slide.style.backgroundImage = "url('" + slide.dataset.bg + "')";
+                slide.removeAttribute('data-bg');
             }
-        }
-
-        // Build dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('button');
-            dot.className = 'dot' + (i === 0 ? ' active' : '');
-            dot.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
-            dot.dataset.index = i;
-            dot.addEventListener('click', () => goToSlide(i));
-            dotsContainer.appendChild(dot);
         });
 
-        const dots = dotsContainer.querySelectorAll('.dot');
+        var currentSlide = 0;
+        var slideTimer   = null;
+
+        // --- Dots ---
+        var dotsContainer = document.getElementById('heroDots');
+        var dots = [];
+        if (dotsContainer) {
+            slides.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Ir a imagen ' + (i + 1));
+                dot.addEventListener('click', function () {
+                    goToSlide(i);
+                    resetTimer();
+                });
+                dotsContainer.appendChild(dot);
+                dots.push(dot);
+            });
+        }
 
         function goToSlide(index) {
-            const nextIndex = (index + slides.length) % slides.length;
-            
-            // Ensure next slide image is loaded before activating
-            loadSlideBg(slides[nextIndex]);
-
-            // Also preload the one after next
-            const upcomingIndex = (nextIndex + 1) % slides.length;
-            loadSlideBg(slides[upcomingIndex]);
-
+            var next = ((index % slides.length) + slides.length) % slides.length;
             slides[currentSlide].classList.remove('active');
-            dots[currentSlide].classList.remove('active');
-            currentSlide = nextIndex;
+            if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+            currentSlide = next;
             slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
         }
 
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
+        function startTimer() {
+            slideTimer = setInterval(function () {
+                goToSlide(currentSlide + 1);
+            }, 7000);
         }
 
-        // Preload rest of slides once page has fully loaded
-        window.addEventListener('load', () => {
-            // Wait 1.5s after load to not compete with critical rendering
-            setTimeout(() => {
-                slides.forEach(s => loadSlideBg(s));
-            }, 1500);
-        });
+        function stopTimer()  { clearInterval(slideTimer); }
+        function resetTimer() { stopTimer(); startTimer(); }
 
-        // Auto rotate
-        function startSlideshow() {
-            slideInterval = setInterval(nextSlide, 10000);
-        }
-        function stopSlideshow() {
-            clearInterval(slideInterval);
-        }
+        // Arranca
+        startTimer();
 
-        startSlideshow();
-
-        // Pause on hover
-        const hero = document.getElementById('hero');
+        // Pausa cuando el mouse está sobre el hero
+        var hero = document.getElementById('hero');
         if (hero) {
-            hero.addEventListener('mouseenter', stopSlideshow);
-            hero.addEventListener('mouseleave', startSlideshow);
+            hero.addEventListener('mouseenter', stopTimer);
+            hero.addEventListener('mouseleave', startTimer);
         }
-    }
+    }());
 
     // ---------- Tipologías tabs ----------
     const tabButtons = document.querySelectorAll('.tab-btn');
