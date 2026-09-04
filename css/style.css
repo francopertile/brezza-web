@@ -70,7 +70,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 .section { padding: var(--section-py) 0; }
 .section-alt { background: var(--c-cream); }
-.section-dark { background: var(--c-primary); color: var(--c-text-light); }
+.section-dark { background: var(--c-forest); color: var(--c-text-light); }
 .text-light { color: var(--c-text-light) !important; }
 .text-light-muted { color: rgba(245, 239, 227, 0.75) !important; }
 
@@ -80,7 +80,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--c-primary);
+    color: var(--c-forest);
     margin-bottom: 1rem;
 }
 .eyebrow-light { color: var(--c-primary-light); }
@@ -111,23 +111,23 @@ h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
     border: 2px solid transparent;
 }
 .btn-primary {
-    background: var(--c-primary);
+    background: var(--c-forest);
     color: var(--c-white);
-    border-color: var(--c-primary);
+    border-color: var(--c-forest);
 }
 .btn-primary:hover {
-    background: var(--c-primary-dark);
-    border-color: var(--c-primary-dark);
+    background: var(--c-forest-dark);
+    border-color: var(--c-forest-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
 .btn-outline {
     background: transparent;
-    color: var(--c-primary);
-    border-color: var(--c-primary);
+    color: var(--c-forest);
+    border-color: var(--c-forest);
 }
 .btn-outline:hover {
-    background: var(--c-primary);
+    background: var(--c-forest);
     color: var(--c-white);
 }
 .btn-block { display: block; width: 100%; }
@@ -220,7 +220,7 @@ h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
     border-radius: var(--radius);
     transition: all var(--transition);
 }
-.nav-cta:hover { background: var(--c-primary); color: var(--c-white) !important; border-color: var(--c-primary); }
+.nav-cta:hover { background: var(--c-forest); color: var(--c-white) !important; border-color: var(--c-forest); }
 .nav-cta::after { display: none; }
 
 .nav-toggle {
@@ -385,7 +385,7 @@ form input, form select {
 }
 form input:focus, form select:focus {
     outline: none;
-    border-color: var(--c-primary);
+    border-color: var(--c-forest);
 }
 form .btn { margin-top: 1.5rem; }
 
@@ -735,7 +735,7 @@ form .btn { margin-top: 1.5rem; }
     margin-top: 1.5rem;
     padding: 1rem 1.25rem;
     background: var(--c-cream);
-    border-left: 4px solid var(--c-primary);
+    border-left: 4px solid var(--c-forest);
     border-radius: var(--radius);
     color: var(--c-text);
 }
