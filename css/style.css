@@ -589,31 +589,32 @@ form .btn { margin-top: 1.5rem; }
     gap: 3rem;
     align-items: start;
 }
-.tip-info h3 { color: var(--c-cream); font-size: 1.5rem; margin-bottom: 1rem; }
+.tip-info h3 { color: var(--c-cream); font-size: 1.8rem; margin-bottom: 1.5rem; }
 .area-stack {
     background: rgba(255, 255, 255, 0.05);
-    padding: 1rem 1.25rem;
+    padding: 1.5rem;
     border-radius: var(--radius);
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 .area-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid rgba(245, 239, 227, 0.1);
     color: var(--c-cream);
+    font-size: 1.05rem;
 }
 .area-row:last-child { border-bottom: none; }
-.area-row span { font-size: 0.82rem; opacity: 0.75; }
-.area-row strong { color: var(--c-primary-light); font-weight: 700; font-size: 1rem; }
+.area-row span { font-size: 1rem; opacity: 0.8; }
+.area-row strong { color: var(--c-primary-light); font-weight: 700; font-size: 1.15rem; }
 .area-row.total {
     border-top: 2px solid rgba(245, 239, 227, 0.3);
-    margin-top: 0.25rem;
-    padding-top: 0.75rem;
-    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    font-size: 1.1rem;
 }
-.area-row.total strong { color: var(--c-white); font-size: 1.1rem; }
+.area-row.total strong { color: var(--c-white); font-size: 1.25rem; }
 .tip-plan img {
     width: 100%;
     background: var(--c-white);
@@ -647,9 +648,8 @@ form .btn { margin-top: 1.5rem; }
 }
 .plan-card img {
     display: block;
-    max-height: 66vh;
+    height: 100vh;
     width: auto;
-    height: auto;
     transition: transform 0.4s ease;
 }
 .plan-card:hover img { transform: scale(1.04); }
