@@ -585,7 +585,7 @@ form .btn { margin-top: 1.5rem; }
 
 .tipologia-grid {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 1fr auto;
     gap: 3rem;
     align-items: start;
 }
