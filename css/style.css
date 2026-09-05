@@ -585,33 +585,35 @@ form .btn { margin-top: 1.5rem; }
 
 .tipologia-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 1.6fr;
     gap: 3rem;
-    align-items: center;
+    align-items: start;
 }
-.tip-info h3 { color: var(--c-cream); font-size: 1.8rem; margin-bottom: 1.5rem; }
+.tip-info h3 { color: var(--c-cream); font-size: 1.5rem; margin-bottom: 1rem; }
 .area-stack {
     background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
+    padding: 1rem 1.25rem;
     border-radius: var(--radius);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 .area-row {
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem 0;
+    align-items: center;
+    padding: 0.5rem 0;
     border-bottom: 1px solid rgba(245, 239, 227, 0.1);
     color: var(--c-cream);
 }
 .area-row:last-child { border-bottom: none; }
-.area-row strong { color: var(--c-primary-light); font-weight: 600; }
+.area-row span { font-size: 0.82rem; opacity: 0.75; }
+.area-row strong { color: var(--c-primary-light); font-weight: 700; font-size: 1rem; }
 .area-row.total {
     border-top: 2px solid rgba(245, 239, 227, 0.3);
-    margin-top: 0.5rem;
-    padding-top: 1rem;
-    font-size: 1.1rem;
+    margin-top: 0.25rem;
+    padding-top: 0.75rem;
+    font-size: 1rem;
 }
-.area-row.total strong { color: var(--c-white); }
+.area-row.total strong { color: var(--c-white); font-size: 1.1rem; }
 .tip-plan img {
     width: 100%;
     background: var(--c-white);
@@ -619,6 +621,66 @@ form .btn { margin-top: 1.5rem; }
     padding: 0.5rem;
     box-shadow: var(--shadow);
 }
+
+/* --- Plan cards (2 per tipología) --- */
+.tip-plans-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.plan-card {
+    position: relative;
+    display: block;
+    background: var(--c-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.plan-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+}
+.plan-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.plan-card:hover img { transform: scale(1.04); }
+.plan-card-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1.2rem 0.8rem 0.6rem;
+    text-align: center;
+}
+.plan-card-zoom {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(255,255,255,0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    color: #333;
+    backdrop-filter: blur(4px);
+}
+.plan-card-zoom svg { width: 1rem; height: 1rem; }
+.plan-card:hover .plan-card-zoom { opacity: 1; transform: scale(1); }
 .disclaimer {
     font-size: 0.8rem;
     color: rgba(245, 239, 227, 0.5);
@@ -942,6 +1004,7 @@ form .btn { margin-top: 1.5rem; }
     }
 
     .tipologia-grid { grid-template-columns: 1fr; }
+    .tip-plans-grid { grid-template-columns: 1fr 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
 
     .gallery-grid {
@@ -966,5 +1029,6 @@ form .btn { margin-top: 1.5rem; }
     .footer-form { padding: 1.5rem; }
     .col-image iframe { height: 280px; }
     .gallery-grid { grid-template-columns: 1fr; }
+    .tip-plans-grid { grid-template-columns: 1fr; }
     .quick-facts-grid { grid-template-columns: 1fr; }
 }
