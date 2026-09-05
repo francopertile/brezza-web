@@ -131,6 +131,67 @@
         });
     });
 
+    // ---------- Amenidades Carousel ----------
+    (function () {
+        var track = document.getElementById('carouselTrack');
+        var slides = track ? track.children : [];
+        if (!track || slides.length < 2) return;
+
+        var current = 0;
+        var total = slides.length;
+        var timer = null;
+
+        // Build dots
+        var dotsWrap = document.getElementById('carouselDots');
+        var dots = [];
+        for (var i = 0; i < total; i++) {
+            var d = document.createElement('button');
+            d.className = 'c-dot' + (i === 0 ? ' active' : '');
+            d.setAttribute('aria-label', 'Ir a slide ' + (i + 1));
+            (function (idx) { d.addEventListener('click', function () { goTo(idx); resetAuto(); }); })(i);
+            dotsWrap.appendChild(d);
+            dots.push(d);
+        }
+
+        function goTo(idx) {
+            current = ((idx % total) + total) % total;
+            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dots.forEach(function (d, j) { d.classList.toggle('active', j === current); });
+        }
+
+        document.getElementById('carouselPrev').addEventListener('click', function () { goTo(current - 1); resetAuto(); });
+        document.getElementById('carouselNext').addEventListener('click', function () { goTo(current + 1); resetAuto(); });
+
+        function startAuto() { timer = setInterval(function () { goTo(current + 1); }, 6000); }
+        function stopAuto() { clearInterval(timer); }
+        function resetAuto() { stopAuto(); startAuto(); }
+
+        startAuto();
+
+        var carousel = document.getElementById('amenidadesCarousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', stopAuto);
+            carousel.addEventListener('mouseleave', startAuto);
+
+            // Touch swipe support
+            var touchStartX = 0;
+            var touchEndX = 0;
+            carousel.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAuto();
+            }, { passive: true });
+            carousel.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                var diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 45) {
+                    if (diff > 0) goTo(current + 1);
+                    else goTo(current - 1);
+                }
+                startAuto();
+            }, { passive: true });
+        }
+    }());
+
     // ---------- Gallery Lightbox ----------
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
