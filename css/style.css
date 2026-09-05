@@ -627,7 +627,7 @@ form .btn { margin-top: 1.5rem; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
-    max-height: 54vh;
+    height: 66vh;
 }
 .plan-card {
     position: relative;
@@ -636,7 +636,7 @@ form .btn { margin-top: 1.5rem; }
     border-radius: var(--radius);
     overflow: hidden;
     cursor: zoom-in;
-    max-height: 27vh;
+    height: 100%;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -994,7 +994,7 @@ form .btn { margin-top: 1.5rem; }
     }
 
     .tipologia-grid { grid-template-columns: 1fr; }
-    .tip-plans-grid { grid-template-columns: 1fr 1fr; }
+    .tip-plans-grid { grid-template-columns: 1fr 1fr; height: 50vh; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
 
     .gallery-grid {
@@ -1019,6 +1019,6 @@ form .btn { margin-top: 1.5rem; }
     .footer-form { padding: 1.5rem; }
     .col-image iframe { height: 280px; }
     .gallery-grid { grid-template-columns: 1fr; }
-    .tip-plans-grid { grid-template-columns: 1fr; }
+    .tip-plans-grid { grid-template-columns: 1fr; height: 66vh; }
     .quick-facts-grid { grid-template-columns: 1fr; }
 }
