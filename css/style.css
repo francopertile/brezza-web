@@ -692,32 +692,44 @@ form .btn { margin-top: 1.5rem; }
     width: 100%;
     overflow: hidden;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow);
-    aspect-ratio: 16 / 7;
+    box-shadow: var(--shadow-lg, var(--shadow));
+    aspect-ratio: 2200 / 920;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: var(--c-forest-dark);
 }
 .carousel-track {
     display: flex;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     height: 100%;
+    will-change: transform;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .carousel-slide {
     position: relative;
+    flex: 0 0 100%;
+    width: 100%;
     min-width: 100%;
+    max-width: 100%;
     height: 100%;
-    flex-shrink: 0;
 }
 .carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 .carousel-slide-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+    background: linear-gradient(
+        to top,
+        rgba(10, 20, 16, 0.92) 0%,
+        rgba(10, 20, 16, 0.65) 32%,
+        rgba(10, 20, 16, 0.2) 65%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+    pointer-events: none;
 }
 .carousel-slide-content {
     position: absolute;
@@ -725,28 +737,36 @@ form .btn { margin-top: 1.5rem; }
     left: 0;
     right: 0;
     padding: 2.5rem 3rem;
-    color: #fff;
+    color: #ffffff;
+    z-index: 1;
+    pointer-events: none;
 }
 .carousel-slide-content h3 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    color: #ffffff !important;
+    margin-bottom: 0.35rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+    letter-spacing: -0.01em;
 }
 .carousel-meta {
     font-family: var(--font-display);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 400;
     font-style: italic;
-    opacity: 0.85;
-    margin-bottom: 0.4rem;
+    color: #ffffff !important;
+    opacity: 0.95;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 .carousel-detail {
-    font-size: 1rem;
-    opacity: 0.9;
-    max-width: 500px;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    color: #ffffff !important;
+    opacity: 0.95;
+    max-width: 580px;
+    line-height: 1.55;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* Arrows */
@@ -754,50 +774,55 @@ form .btn { margin-top: 1.5rem; }
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 3rem;
-    height: 3rem;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.25);
+    width: 3.2rem;
+    height: 3.2rem;
+    background: rgba(14, 26, 22, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.25s ease;
-    z-index: 2;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
-.carousel-arrow svg { width: 1.2rem; height: 1.2rem; }
+.carousel-arrow svg { width: 1.3rem; height: 1.3rem; stroke: #ffffff; }
 .carousel-arrow:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(14, 26, 22, 0.9);
+    border-color: #ffffff;
     transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
-.carousel-prev { left: 1rem; }
-.carousel-next { right: 1rem; }
+.carousel-prev { left: 1.25rem; }
+.carousel-next { right: 1.25rem; }
 
 /* Dots */
 .carousel-dots {
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.75rem;
     right: 3rem;
     display: flex;
-    gap: 0.5rem;
-    z-index: 2;
+    gap: 0.6rem;
+    z-index: 3;
 }
 .carousel-dots .c-dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    border: none;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
 }
 .carousel-dots .c-dot.active {
-    background: #fff;
-    transform: scale(1.2);
+    background: #ffffff;
+    transform: scale(1.25);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
 }
 
 /* ---------- Investor section ---------- */
@@ -1000,7 +1025,7 @@ form .btn { margin-top: 1.5rem; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
     .investor-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .amenidades-carousel { aspect-ratio: 16 / 9; }
+    .amenidades-carousel { aspect-ratio: 2200 / 920; }
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     .g1 { grid-column: span 1; grid-row: span 1; }
     .g4, .g6 { grid-column: span 1; grid-row: span 1; }
@@ -1070,28 +1095,32 @@ form .btn { margin-top: 1.5rem; }
     .g1, .g4, .g6 { grid-column: span 1; grid-row: span 1; }
 
     .amenidades-carousel {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 16 / 9;
+        min-height: 280px;
         border-radius: var(--radius);
     }
     .carousel-slide-content {
         padding: 1.75rem 1.5rem;
     }
     .carousel-slide-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        color: #ffffff !important;
     }
     .carousel-meta {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
+        color: #ffffff !important;
     }
     .carousel-detail {
-        font-size: 0.9rem;
+        font-size: 0.92rem;
+        color: #ffffff !important;
     }
     .carousel-arrow {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2.6rem;
+        height: 2.6rem;
     }
-    .carousel-prev { left: 0.5rem; }
-    .carousel-next { right: 0.5rem; }
-    .carousel-dots { right: 1.5rem; bottom: 0.75rem; }
+    .carousel-prev { left: 0.6rem; }
+    .carousel-next { right: 0.6rem; }
+    .carousel-dots { right: 1.5rem; bottom: 1rem; }
     .quick-facts-grid { grid-template-columns: 1fr 1fr; }
 
     .tab-btn { padding: 0.75rem 1.25rem; font-size: 0.85rem; }
@@ -1110,22 +1139,28 @@ form .btn { margin-top: 1.5rem; }
     .plan-card img { max-width: 220px; }
     .quick-facts-grid { grid-template-columns: 1fr; }
     .amenidades-carousel {
-        aspect-ratio: 1 / 1;
-        min-height: 320px;
+        aspect-ratio: 16 / 10;
+        min-height: 300px;
     }
     .carousel-slide-content {
         padding: 1.25rem 1rem;
     }
     .carousel-slide-content h3 {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
+        color: #ffffff !important;
+    }
+    .carousel-meta {
+        font-size: 0.95rem;
+        color: #ffffff !important;
     }
     .carousel-detail {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
+        color: #ffffff !important;
         max-width: 100%;
     }
     .carousel-arrow {
-        width: 2rem;
-        height: 2rem;
+        width: 2.2rem;
+        height: 2.2rem;
     }
-    .carousel-dots { right: 1rem; bottom: 0.5rem; }
+    .carousel-dots { right: 1rem; bottom: 0.6rem; }
 }

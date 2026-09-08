@@ -155,7 +155,7 @@
 
         function goTo(idx) {
             current = ((idx % total) + total) % total;
-            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+            track.style.transform = 'translateX(-' + (current * (100 / total)) + '%)';
             dots.forEach(function (d, j) { d.classList.toggle('active', j === current); });
         }
 
