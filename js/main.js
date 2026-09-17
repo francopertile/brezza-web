@@ -53,6 +53,16 @@
                 navToggle.setAttribute('aria-expanded', 'false');
             });
         });
+
+        // Close when clicking outside nav
+        document.addEventListener('click', (e) => {
+            if (siteNav.classList.contains('open') &&
+                !siteNav.contains(e.target) &&
+                !navToggle.contains(e.target)) {
+                siteNav.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 
     // ---------- Hero slideshow ----------
